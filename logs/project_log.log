@@ -1,0 +1,217 @@
+2025-01-20 13:17:01.242 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-20 13:17:01.245 | INFO     | __main__:main:103 - START producer.
+2025-01-20 13:17:01.245 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-01-20 13:17:01.252 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-01-20 13:17:01.252 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-01-20 13:17:03.507 | ERROR    | utils.utils_producer:check_kafka_service_is_ready:102 - Error checking Kafka: NodeNotReadyError
+2025-01-20 13:17:03.530 | ERROR    | utils.utils_producer:verify_services:121 - Kafka broker is not ready. Please check your Kafka setup. Exiting...
+2025-01-22 15:10:44.100 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-22 15:10:44.102 | INFO     | __main__:main:78 - START consumer.
+2025-01-22 15:10:44.102 | INFO     | __main__:get_kafka_topic:35 - Kafka topic: buzzline_topic
+2025-01-22 15:10:44.103 | INFO     | __main__:get_kafka_consumer_group_id:42 - Kafka consumer group ID: kersha_group
+2025-01-22 15:10:44.103 | INFO     | __main__:main:83 - Consumer: Topic 'buzzline_topic' and group 'kersha_group'...
+2025-01-22 15:10:44.103 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='buzzline_topic' and group ID='kersha_group'.
+2025-01-22 15:10:44.223 | INFO     | utils.utils_consumer:create_kafka_consumer:57 - Kafka consumer created successfully.
+2025-01-22 15:10:44.224 | INFO     | __main__:main:89 - Polling messages from topic 'buzzline_topic'...
+2025-01-22 15:13:17.257 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-22 15:13:17.258 | INFO     | __main__:main:99 - START producer.
+2025-01-22 15:13:17.258 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:28 - Checking Zookeeper service at localhost:2181...
+2025-01-22 15:13:18.600 | INFO     | utils.utils_producer:verify_services:60 - Zookeeper and Kafka services are ready.
+2025-01-22 15:13:18.602 | INFO     | __main__:get_kafka_topic:42 - Kafka topic: buzzline_topic
+2025-01-22 15:13:18.603 | INFO     | __main__:get_message_interval:49 - Message interval: 2 seconds
+2025-01-22 15:13:18.717 | INFO     | utils.utils_producer:create_kafka_producer:71 - Kafka producer created with broker: localhost:9092
+2025-01-22 15:13:19.053 | INFO     | utils.utils_producer:create_kafka_topic:92 - Kafka topic 'buzzline_topic' already exists.
+2025-01-22 15:13:19.054 | INFO     | __main__:main:115 - Kafka topic 'buzzline_topic' is ready.
+2025-01-22 15:13:19.055 | INFO     | __main__:main:121 - Starting dynamic message production to topic 'buzzline_topic'...
+2025-01-22 15:13:19.056 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 0: Timestamp - 2025-01-22T15:13:19.056820
+2025-01-22 15:13:19.058 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 0: Timestamp - 2025-01-22T15:13:19.056820
+2025-01-22 15:13:19.080 | ERROR    | __main__:main:98 - Error while consuming messages: 'str' object has no attribute 'decode'
+2025-01-22 15:13:19.116 | INFO     | __main__:main:101 - Kafka consumer for topic 'buzzline_topic' closed.
+2025-01-22 15:13:19.118 | INFO     | __main__:main:103 - END consumer for topic 'buzzline_topic' and group 'kersha_group'.
+2025-01-22 15:13:21.063 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 1: Timestamp - 2025-01-22T15:13:21.063788
+2025-01-22 15:13:21.067 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 1: Timestamp - 2025-01-22T15:13:21.063788
+2025-01-22 15:13:23.069 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 2: Timestamp - 2025-01-22T15:13:23.069923
+2025-01-22 15:13:23.074 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 2: Timestamp - 2025-01-22T15:13:23.069923
+2025-01-22 15:13:25.076 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 3: Timestamp - 2025-01-22T15:13:25.076304
+2025-01-22 15:13:25.078 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 3: Timestamp - 2025-01-22T15:13:25.076304
+2025-01-22 15:13:27.080 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 4: Timestamp - 2025-01-22T15:13:27.080592
+2025-01-22 15:13:27.084 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 4: Timestamp - 2025-01-22T15:13:27.080592
+2025-01-22 15:13:29.087 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 5: Timestamp - 2025-01-22T15:13:29.087463
+2025-01-22 15:13:29.091 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 5: Timestamp - 2025-01-22T15:13:29.087463
+2025-01-22 15:13:31.092 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 6: Timestamp - 2025-01-22T15:13:31.092801
+2025-01-22 15:13:31.098 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 6: Timestamp - 2025-01-22T15:13:31.092801
+2025-01-22 15:13:33.139 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 7: Timestamp - 2025-01-22T15:13:33.139131
+2025-01-22 15:13:33.142 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 7: Timestamp - 2025-01-22T15:13:33.139131
+2025-01-22 15:13:35.145 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 8: Timestamp - 2025-01-22T15:13:35.145219
+2025-01-22 15:13:35.147 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 8: Timestamp - 2025-01-22T15:13:35.145219
+2025-01-22 15:13:37.149 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 9: Timestamp - 2025-01-22T15:13:37.149656
+2025-01-22 15:13:37.150 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 9: Timestamp - 2025-01-22T15:13:37.149656
+2025-01-22 15:13:39.152 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 10: Timestamp - 2025-01-22T15:13:39.152060
+2025-01-22 15:13:39.155 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 10: Timestamp - 2025-01-22T15:13:39.152060
+2025-01-22 15:13:41.157 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 11: Timestamp - 2025-01-22T15:13:41.157426
+2025-01-22 15:13:41.162 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 11: Timestamp - 2025-01-22T15:13:41.157426
+2025-01-22 15:13:43.173 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 12: Timestamp - 2025-01-22T15:13:43.173074
+2025-01-22 15:13:43.175 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 12: Timestamp - 2025-01-22T15:13:43.173074
+2025-01-22 15:13:45.176 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 13: Timestamp - 2025-01-22T15:13:45.176881
+2025-01-22 15:13:45.178 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 13: Timestamp - 2025-01-22T15:13:45.176881
+2025-01-22 15:13:47.179 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 14: Timestamp - 2025-01-22T15:13:47.179453
+2025-01-22 15:13:47.183 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 14: Timestamp - 2025-01-22T15:13:47.179453
+2025-01-22 15:13:49.185 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 15: Timestamp - 2025-01-22T15:13:49.185288
+2025-01-22 15:13:49.188 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 15: Timestamp - 2025-01-22T15:13:49.185288
+2025-01-22 15:13:51.191 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 16: Timestamp - 2025-01-22T15:13:51.191358
+2025-01-22 15:13:51.196 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 16: Timestamp - 2025-01-22T15:13:51.191358
+2025-01-22 15:13:53.203 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 17: Timestamp - 2025-01-22T15:13:53.203033
+2025-01-22 15:13:53.209 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 17: Timestamp - 2025-01-22T15:13:53.203033
+2025-01-22 15:13:55.215 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 18: Timestamp - 2025-01-22T15:13:55.215543
+2025-01-22 15:13:55.217 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 18: Timestamp - 2025-01-22T15:13:55.215543
+2025-01-22 15:13:57.219 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 19: Timestamp - 2025-01-22T15:13:57.219070
+2025-01-22 15:13:57.223 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 19: Timestamp - 2025-01-22T15:13:57.219070
+2025-01-22 15:13:59.224 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 20: Timestamp - 2025-01-22T15:13:59.224972
+2025-01-22 15:13:59.227 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 20: Timestamp - 2025-01-22T15:13:59.224972
+2025-01-22 15:14:01.229 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 21: Timestamp - 2025-01-22T15:14:01.229624
+2025-01-22 15:14:01.232 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 21: Timestamp - 2025-01-22T15:14:01.229624
+2025-01-22 15:14:03.245 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 22: Timestamp - 2025-01-22T15:14:03.245981
+2025-01-22 15:14:03.247 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 22: Timestamp - 2025-01-22T15:14:03.245981
+2025-01-22 15:14:05.249 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 23: Timestamp - 2025-01-22T15:14:05.249797
+2025-01-22 15:14:05.251 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 23: Timestamp - 2025-01-22T15:14:05.249797
+2025-01-22 15:14:07.254 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 24: Timestamp - 2025-01-22T15:14:07.254157
+2025-01-22 15:14:07.255 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 24: Timestamp - 2025-01-22T15:14:07.254157
+2025-01-22 15:14:09.256 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 25: Timestamp - 2025-01-22T15:14:09.256794
+2025-01-22 15:14:09.259 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 25: Timestamp - 2025-01-22T15:14:09.256794
+2025-01-22 15:14:11.260 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 26: Timestamp - 2025-01-22T15:14:11.260442
+2025-01-22 15:14:11.262 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 26: Timestamp - 2025-01-22T15:14:11.260442
+2025-01-22 15:14:13.264 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 27: Timestamp - 2025-01-22T15:14:13.264090
+2025-01-22 15:14:13.266 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 27: Timestamp - 2025-01-22T15:14:13.264090
+2025-01-22 15:14:15.268 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 28: Timestamp - 2025-01-22T15:14:15.268776
+2025-01-22 15:14:15.270 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 28: Timestamp - 2025-01-22T15:14:15.268776
+2025-01-22 15:14:17.272 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 29: Timestamp - 2025-01-22T15:14:17.272606
+2025-01-22 15:14:17.276 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 29: Timestamp - 2025-01-22T15:14:17.272606
+2025-01-22 15:14:19.295 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 30: Timestamp - 2025-01-22T15:14:19.295476
+2025-01-22 15:14:19.300 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 30: Timestamp - 2025-01-22T15:14:19.295476
+2025-01-22 15:14:21.302 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 31: Timestamp - 2025-01-22T15:14:21.302288
+2025-01-22 15:14:21.310 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 31: Timestamp - 2025-01-22T15:14:21.302288
+2025-01-22 15:14:23.374 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 32: Timestamp - 2025-01-22T15:14:23.374427
+2025-01-22 15:14:23.375 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 32: Timestamp - 2025-01-22T15:14:23.374427
+2025-01-22 15:14:25.377 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 33: Timestamp - 2025-01-22T15:14:25.377937
+2025-01-22 15:14:25.380 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 33: Timestamp - 2025-01-22T15:14:25.377937
+2025-01-22 15:14:27.382 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 34: Timestamp - 2025-01-22T15:14:27.382450
+2025-01-22 15:14:27.383 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 34: Timestamp - 2025-01-22T15:14:27.382450
+2025-01-22 15:14:29.385 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 35: Timestamp - 2025-01-22T15:14:29.385665
+2025-01-22 15:14:29.391 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 35: Timestamp - 2025-01-22T15:14:29.385665
+2025-01-22 15:14:31.393 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 36: Timestamp - 2025-01-22T15:14:31.393102
+2025-01-22 15:14:31.395 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 36: Timestamp - 2025-01-22T15:14:31.393102
+2025-01-22 15:14:33.397 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 37: Timestamp - 2025-01-22T15:14:33.397190
+2025-01-22 15:14:33.400 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 37: Timestamp - 2025-01-22T15:14:33.397190
+2025-01-22 15:14:35.401 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 38: Timestamp - 2025-01-22T15:14:35.401830
+2025-01-22 15:14:35.404 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 38: Timestamp - 2025-01-22T15:14:35.401830
+2025-01-22 15:14:37.409 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 39: Timestamp - 2025-01-22T15:14:37.409135
+2025-01-22 15:14:37.410 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 39: Timestamp - 2025-01-22T15:14:37.409135
+2025-01-22 15:14:39.430 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 40: Timestamp - 2025-01-22T15:14:39.430229
+2025-01-22 15:14:39.470 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 40: Timestamp - 2025-01-22T15:14:39.430229
+2025-01-22 15:14:41.484 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 41: Timestamp - 2025-01-22T15:14:41.484362
+2025-01-22 15:14:41.489 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 41: Timestamp - 2025-01-22T15:14:41.484362
+2025-01-22 15:14:43.139 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-22 15:14:43.140 | INFO     | __main__:main:78 - START consumer.
+2025-01-22 15:14:43.144 | INFO     | __main__:get_kafka_topic:35 - Kafka topic: buzzline_topic
+2025-01-22 15:14:43.146 | INFO     | __main__:get_kafka_consumer_group_id:42 - Kafka consumer group ID: kersha_group
+2025-01-22 15:14:43.148 | INFO     | __main__:main:83 - Consumer: Topic 'buzzline_topic' and group 'kersha_group'...
+2025-01-22 15:14:43.153 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='buzzline_topic' and group ID='kersha_group'.
+2025-01-22 15:14:43.271 | INFO     | utils.utils_consumer:create_kafka_consumer:57 - Kafka consumer created successfully.
+2025-01-22 15:14:43.272 | INFO     | __main__:main:89 - Polling messages from topic 'buzzline_topic'...
+2025-01-22 15:14:43.393 | ERROR    | __main__:main:98 - Error while consuming messages: 'str' object has no attribute 'decode'
+2025-01-22 15:14:43.399 | INFO     | __main__:main:101 - Kafka consumer for topic 'buzzline_topic' closed.
+2025-01-22 15:14:43.399 | INFO     | __main__:main:103 - END consumer for topic 'buzzline_topic' and group 'kersha_group'.
+2025-01-22 15:14:43.495 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 42: Timestamp - 2025-01-22T15:14:43.495996
+2025-01-22 15:14:43.496 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 42: Timestamp - 2025-01-22T15:14:43.495996
+2025-01-22 15:14:45.498 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 43: Timestamp - 2025-01-22T15:14:45.498752
+2025-01-22 15:14:45.503 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 43: Timestamp - 2025-01-22T15:14:45.498752
+2025-01-22 15:14:47.506 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 44: Timestamp - 2025-01-22T15:14:47.506895
+2025-01-22 15:14:47.510 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 44: Timestamp - 2025-01-22T15:14:47.506895
+2025-01-22 15:14:49.511 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 45: Timestamp - 2025-01-22T15:14:49.511934
+2025-01-22 15:14:49.515 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 45: Timestamp - 2025-01-22T15:14:49.511934
+2025-01-22 15:14:51.517 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 46: Timestamp - 2025-01-22T15:14:51.517668
+2025-01-22 15:14:51.518 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 46: Timestamp - 2025-01-22T15:14:51.517668
+2025-01-22 15:14:53.520 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 47: Timestamp - 2025-01-22T15:14:53.520619
+2025-01-22 15:14:53.521 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 47: Timestamp - 2025-01-22T15:14:53.520619
+2025-01-22 15:14:55.524 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 48: Timestamp - 2025-01-22T15:14:55.524721
+2025-01-22 15:14:55.525 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 48: Timestamp - 2025-01-22T15:14:55.524721
+2025-01-22 15:14:57.528 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 49: Timestamp - 2025-01-22T15:14:57.528102
+2025-01-22 15:14:57.532 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 49: Timestamp - 2025-01-22T15:14:57.528102
+2025-01-22 15:14:59.533 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 50: Timestamp - 2025-01-22T15:14:59.533607
+2025-01-22 15:14:59.535 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 50: Timestamp - 2025-01-22T15:14:59.533607
+2025-01-22 15:15:01.539 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 51: Timestamp - 2025-01-22T15:15:01.539440
+2025-01-22 15:15:01.541 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 51: Timestamp - 2025-01-22T15:15:01.539440
+2025-01-22 15:15:03.546 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 52: Timestamp - 2025-01-22T15:15:03.546036
+2025-01-22 15:15:03.548 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 52: Timestamp - 2025-01-22T15:15:03.546036
+2025-01-22 15:15:05.549 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 53: Timestamp - 2025-01-22T15:15:05.549728
+2025-01-22 15:15:05.551 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 53: Timestamp - 2025-01-22T15:15:05.549728
+2025-01-22 15:15:07.554 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 54: Timestamp - 2025-01-22T15:15:07.554151
+2025-01-22 15:15:07.555 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 54: Timestamp - 2025-01-22T15:15:07.554151
+2025-01-22 15:15:09.556 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 55: Timestamp - 2025-01-22T15:15:09.556725
+2025-01-22 15:15:09.557 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 55: Timestamp - 2025-01-22T15:15:09.556725
+2025-01-22 15:15:11.559 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 56: Timestamp - 2025-01-22T15:15:11.559444
+2025-01-22 15:15:11.560 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 56: Timestamp - 2025-01-22T15:15:11.559444
+2025-01-22 15:15:13.562 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 57: Timestamp - 2025-01-22T15:15:13.562159
+2025-01-22 15:15:13.562 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 57: Timestamp - 2025-01-22T15:15:13.562159
+2025-01-22 15:15:15.564 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 58: Timestamp - 2025-01-22T15:15:15.564515
+2025-01-22 15:15:15.569 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 58: Timestamp - 2025-01-22T15:15:15.564515
+2025-01-22 15:15:17.570 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 59: Timestamp - 2025-01-22T15:15:17.570719
+2025-01-22 15:15:17.572 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 59: Timestamp - 2025-01-22T15:15:17.570719
+2025-01-22 15:15:19.574 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 60: Timestamp - 2025-01-22T15:15:19.574025
+2025-01-22 15:15:19.576 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 60: Timestamp - 2025-01-22T15:15:19.574025
+2025-01-22 15:15:21.585 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 61: Timestamp - 2025-01-22T15:15:21.584702
+2025-01-22 15:15:21.589 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 61: Timestamp - 2025-01-22T15:15:21.584702
+2025-01-22 15:15:23.591 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 62: Timestamp - 2025-01-22T15:15:23.591000
+2025-01-22 15:15:23.593 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 62: Timestamp - 2025-01-22T15:15:23.591000
+2025-01-22 15:15:25.606 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 63: Timestamp - 2025-01-22T15:15:25.606620
+2025-01-22 15:15:25.608 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 63: Timestamp - 2025-01-22T15:15:25.606620
+2025-01-22 15:15:27.610 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 64: Timestamp - 2025-01-22T15:15:27.610000
+2025-01-22 15:15:27.611 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 64: Timestamp - 2025-01-22T15:15:27.610000
+2025-01-22 15:15:29.613 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 65: Timestamp - 2025-01-22T15:15:29.613018
+2025-01-22 15:15:29.613 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 65: Timestamp - 2025-01-22T15:15:29.613018
+2025-01-22 15:15:31.615 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 66: Timestamp - 2025-01-22T15:15:31.615210
+2025-01-22 15:15:31.616 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 66: Timestamp - 2025-01-22T15:15:31.615210
+2025-01-22 15:15:33.619 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 67: Timestamp - 2025-01-22T15:15:33.619047
+2025-01-22 15:15:33.621 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 67: Timestamp - 2025-01-22T15:15:33.619047
+2025-01-22 15:15:35.623 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 68: Timestamp - 2025-01-22T15:15:35.623300
+2025-01-22 15:15:35.626 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 68: Timestamp - 2025-01-22T15:15:35.623300
+2025-01-22 15:15:37.628 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 69: Timestamp - 2025-01-22T15:15:37.628853
+2025-01-22 15:15:37.631 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 69: Timestamp - 2025-01-22T15:15:37.628853
+2025-01-22 15:15:39.633 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 70: Timestamp - 2025-01-22T15:15:39.633404
+2025-01-22 15:15:39.637 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 70: Timestamp - 2025-01-22T15:15:39.633404
+2025-01-22 15:15:41.638 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 71: Timestamp - 2025-01-22T15:15:41.638400
+2025-01-22 15:15:41.641 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 71: Timestamp - 2025-01-22T15:15:41.638400
+2025-01-22 15:15:43.643 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 72: Timestamp - 2025-01-22T15:15:43.643152
+2025-01-22 15:15:43.648 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 72: Timestamp - 2025-01-22T15:15:43.643152
+2025-01-22 15:15:45.688 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 73: Timestamp - 2025-01-22T15:15:45.688936
+2025-01-22 15:15:45.692 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 73: Timestamp - 2025-01-22T15:15:45.688936
+2025-01-22 15:15:47.695 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 74: Timestamp - 2025-01-22T15:15:47.695941
+2025-01-22 15:15:47.699 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 74: Timestamp - 2025-01-22T15:15:47.695941
+2025-01-22 15:15:49.700 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 75: Timestamp - 2025-01-22T15:15:49.700269
+2025-01-22 15:15:49.701 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 75: Timestamp - 2025-01-22T15:15:49.700269
+2025-01-22 15:15:51.703 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 76: Timestamp - 2025-01-22T15:15:51.703470
+2025-01-22 15:15:51.707 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 76: Timestamp - 2025-01-22T15:15:51.703470
+2025-01-22 15:15:53.709 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 77: Timestamp - 2025-01-22T15:15:53.709218
+2025-01-22 15:15:53.711 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 77: Timestamp - 2025-01-22T15:15:53.709218
+2025-01-22 15:15:55.716 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 78: Timestamp - 2025-01-22T15:15:55.716506
+2025-01-22 15:15:55.720 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 78: Timestamp - 2025-01-22T15:15:55.716506
+2025-01-22 15:15:57.721 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 79: Timestamp - 2025-01-22T15:15:57.721914
+2025-01-22 15:15:57.722 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 79: Timestamp - 2025-01-22T15:15:57.721914
+2025-01-22 15:15:59.725 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 80: Timestamp - 2025-01-22T15:15:59.725891
+2025-01-22 15:15:59.726 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 80: Timestamp - 2025-01-22T15:15:59.725891
+2025-01-22 15:16:01.729 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 81: Timestamp - 2025-01-22T15:16:01.729105
+2025-01-22 15:16:01.730 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 81: Timestamp - 2025-01-22T15:16:01.729105
+2025-01-22 15:16:03.733 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 82: Timestamp - 2025-01-22T15:16:03.733850
+2025-01-22 15:16:03.737 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 82: Timestamp - 2025-01-22T15:16:03.733850
+2025-01-22 15:16:05.739 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 83: Timestamp - 2025-01-22T15:16:05.739123
+2025-01-22 15:16:05.740 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 83: Timestamp - 2025-01-22T15:16:05.739123
+2025-01-22 15:16:07.742 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 84: Timestamp - 2025-01-22T15:16:07.742869
+2025-01-22 15:16:07.748 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 84: Timestamp - 2025-01-22T15:16:07.742869
+2025-01-22 15:16:09.749 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 85: Timestamp - 2025-01-22T15:16:09.749779
+2025-01-22 15:16:09.752 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 85: Timestamp - 2025-01-22T15:16:09.749779
+2025-01-22 15:16:11.754 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 86: Timestamp - 2025-01-22T15:16:11.754350
+2025-01-22 15:16:11.757 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 86: Timestamp - 2025-01-22T15:16:11.754350
+2025-01-22 15:16:13.758 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 87: Timestamp - 2025-01-22T15:16:13.758879
+2025-01-22 15:16:13.759 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 87: Timestamp - 2025-01-22T15:16:13.758879
+2025-01-22 15:16:15.760 | INFO     | __main__:generate_dynamic_messages:72 - Generated message: Dynamic Message 88: Timestamp - 2025-01-22T15:16:15.760686
+2025-01-22 15:16:15.760 | INFO     | __main__:generate_dynamic_messages:74 - Sent message to topic 'buzzline_topic': Dynamic Message 88: Timestamp - 2025-01-22T15:16:15.760686
