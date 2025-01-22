@@ -1,7 +1,7 @@
 """
 kafka_producer_kersha.py
 
-Produce dynamic streaming messages and send them to a Kafka topic.
+Produce some streaming messages and send them to a Kafka topic.
 """
 
 #####################################
@@ -12,7 +12,6 @@ Produce dynamic streaming messages and send them to a Kafka topic.
 import os
 import sys
 import time
-from datetime import datetime
 
 # Import external packages
 from dotenv import load_dotenv
@@ -38,7 +37,7 @@ load_dotenv()
 
 def get_kafka_topic() -> str:
     """Fetch Kafka topic from environment or use default."""
-    topic = os.getenv("KAFKA_TOPIC", "custom_topic")
+    topic = os.getenv("KAFKA_TOPIC", "kersha_topic")
     logger.info(f"Kafka topic: {topic}")
     return topic
 
@@ -49,14 +48,15 @@ def get_message_interval() -> int:
     logger.info(f"Message interval: {interval} seconds")
     return interval
 
+
 #####################################
-# Dynamic Message Generator
+# Message Generator
 #####################################
 
 
-def generate_dynamic_messages(producer, topic, interval_secs):
+def generate_messages(producer, topic, interval_secs):
     """
-    Generate a stream of dynamic messages and send them to a Kafka topic.
+    Generate a stream of custom messages and send them to a Kafka topic.
 
     Args:
         producer (KafkaProducer): The Kafka producer instance.
@@ -64,16 +64,20 @@ def generate_dynamic_messages(producer, topic, interval_secs):
         interval_secs (int): Time in seconds between sending messages.
 
     """
+    string_list: list = [
+        "Welcome to Kersha's Kafka!",
+        "Streaming is exciting!",
+        "Data pipelines are powerful.",
+        "Enjoy learning Kafka with Python.",
+        "Sending you all good vibes!",
+    ]
     try:
-        count = 0
         while True:
-            timestamp = datetime.now().isoformat()
-            message = f"Dynamic Message {count}: Timestamp - {timestamp}"
-            logger.info(f"Generated message: {message}")
-            producer.send(topic, value=message.encode("utf-8"))
-            logger.info(f"Sent message to topic '{topic}': {message}")
-            count += 1
-            time.sleep(interval_secs)
+            for message in string_list:
+                logger.info(f"Generated message: {message}")
+                producer.send(topic, value=message.encode("utf-8"))
+                logger.info(f"Sent message to topic '{topic}': {message}")
+                time.sleep(interval_secs)
     except KeyboardInterrupt:
         logger.warning("Producer interrupted by user.")
     except Exception as e:
@@ -94,12 +98,12 @@ def main():
 
     - Ensures the Kafka topic exists.
     - Creates a Kafka producer using the `create_kafka_producer` utility.
-    - Streams dynamic messages to the Kafka topic.
+    - Streams custom messages to the Kafka topic.
     """
     logger.info("START producer.")
     verify_services()
 
-    # fetch .env content
+    # Fetch .env content
     topic = get_kafka_topic()
     interval_secs = get_message_interval()
 
@@ -117,9 +121,9 @@ def main():
         logger.error(f"Failed to create or verify topic '{topic}': {e}")
         sys.exit(1)
 
-    # Generate and send dynamic messages
-    logger.info(f"Starting dynamic message production to topic '{topic}'...")
-    generate_dynamic_messages(producer, topic, interval_secs)
+    # Generate and send messages
+    logger.info(f"Starting message production to topic '{topic}'...")
+    generate_messages(producer, topic, interval_secs)
 
     logger.info("END producer.")
 
@@ -130,3 +134,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
