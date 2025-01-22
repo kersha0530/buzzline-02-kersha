@@ -89,7 +89,7 @@ def main() -> None:
     logger.info(f"Polling messages from topic '{topic}'...")
     try:
         for message in consumer:
-            message_str = message.value.decode('utf-8')  # Ensure string decoding
+            message_str = message.value if isinstance(message.value, str) else message.value.decode('utf-8')
             logger.debug(f"Received message at offset {message.offset}: {message_str}")
             process_message(message_str)
     except KeyboardInterrupt:
